@@ -10,7 +10,7 @@ export interface TokenGateParams {
   contract_address: string;
 }
 
-const TABLE_NAME = "token_gate_streams";
+const TABLE_NAME = "token_gate_params";
 
 export const upsertTokenGateParams = async (params: TokenGateParams) => {
   const { data, error } = await supabase
