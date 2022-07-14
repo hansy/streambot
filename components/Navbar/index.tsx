@@ -21,7 +21,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center">
-            {isStreamPage && isConnected && (
+            {isStreamPage && (
               <ConnectButton chainStatus="none" showBalance={false} />
             )}
           </div>
