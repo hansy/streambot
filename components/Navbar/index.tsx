@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/">
-                <a>StreamBot</a>
+                <a className="noto text-2xl">StreamBot</a>
               </Link>
             </div>
           </div>
