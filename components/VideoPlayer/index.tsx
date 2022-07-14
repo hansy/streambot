@@ -11,29 +11,22 @@ interface Props {
 const Player = ({ src, poster, onPlay }: Props) => {
   const playerRef = useRef<null | VideoJsPlayer>(null);
 
-  if (!src) return null;
-
   // this needs to be abstracted more for compatibility with other players
   const videoJsOptions: any = {
     poster: poster || "",
-    autoplay: false,
+    autoplay: true,
     controls: true,
     responsive: true,
     fluid: true,
-    sources: [
-      {
-        src: src,
-        type: "application/x-mpegURL",
-      },
-    ],
+    sources: [],
   };
 
-  // if (src) {
-  //   videoJsOptions.sources.push({
-  //     src: src,
-  //     type: "application/x-mpegURL",
-  //   });
-  // }
+  if (src) {
+    videoJsOptions.sources.push({
+      src: src,
+      type: "application/x-mpegURL",
+    });
+  }
 
   const handlePlayerReady = (player: VideoJsPlayer) => {
     playerRef.current = player;

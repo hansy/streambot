@@ -45,7 +45,7 @@ export default function VideoJs({ options, onReady }: Props) {
       const player = playerRef.current;
 
       // prevent player from reloading the same src, causing interrupted playback
-      if (options.sources) {
+      if (options.sources && options.sources.length > 0) {
         if (player.src() !== options.sources[0].src) {
           player.src(options.sources);
         }
