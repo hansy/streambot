@@ -22,9 +22,6 @@ export default async function handler(
   if (isValidRequest) {
     if (req.method === "POST") {
       const body = JSON.parse(buffer.toString("utf8"));
-
-      console.log(inspect(body, false, null, true /* enable colors */));
-
       const interactionResponse = await handleInteraction(body);
 
       return res.send(interactionResponse);
