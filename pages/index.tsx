@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { upsertDiscordCommand } from "../setupScripts/installCommands";
 import commands from "../commands";
+import Container from "../components/Container";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="flex justify-center items-center">
           <a
             className="mt-32 inline-flex items-center px-6 py-3 border border-transparent text-4xl font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 h-24 max-w-sm"
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
             Add StreamBot
           </a>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
