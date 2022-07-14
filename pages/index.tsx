@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { get } from "../util/request";
+import { upsertDiscordCommand } from "../setupScripts/installCommands";
+import commands from "../commands";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,11 @@ const Home: NextPage = () => {
 };
 
 export const getStaticProps = async () => {
-  await get(`${process.env.NEXT_PUBLIC_HOST}/api/setup`);
+  Promise.all(
+    Object.keys(commands).map((name: string) =>
+      upsertDiscordCommand(commands[name])
+    )
+  );
   return { props: {} };
 };
 
