@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             className="mt-32 inline-flex items-center px-6 py-3 border border-transparent text-4xl font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 h-24 max-w-sm"
             href={process.env.NEXT_PUBLIC_DISCORD_INSTALL_URL}
           >
-            Add StreamBot
+            Add to Discord
           </a>
         </div>
       </Container>
