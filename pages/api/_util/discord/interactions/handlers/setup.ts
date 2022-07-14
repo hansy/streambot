@@ -24,7 +24,10 @@ export const handleSetupCommand = (): InteractionResponse => {
               custom_id: "chain",
               required: true,
               label: "Chain",
-              options: chainOptions,
+              options: chainOptions.map((chain) => ({
+                label: chain.name,
+                value: chain.network,
+              })),
             },
           ],
         },
