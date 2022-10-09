@@ -52,11 +52,11 @@ join guild_streams as gs on gs.discord_guild_id = tg.discord_guild_id;
 
 ### 3. Create Discord developer application
 
-The Discord bot needs to be created/registered in Discord's developer portal (https://discord.com/developers). Once you create an application, add the Application ID, Pulic Key, and Discord Bot Token as `DISCORD_APP_ID`, `DISCORD_PUBLIC_KEY`, and `DISCORD_BOT_TOKEN` respectively, to your environment (`.env` file if local).
+The Discord bot needs to be created/registered in Discord's developer portal (https://discord.com/developers). Once you create an application, add the Application ID, Public Key, and Discord Bot Token as `DISCORD_APP_ID`, `DISCORD_PUBLIC_KEY`, and `DISCORD_BOT_TOKEN`, respectively, to your environment (`.env` file if local).
 
-You'll also need to generate an OAuth URL to get the necessary permissions from the user. This can be generated in the developer portal by going to OAuth2 -> URL Generator.
+You'll also need to generate an OAuth URL to get the necessary permissions from the user. This can be generated in the developer portal by going to **OAuth2 -> URL Generator**.
 
-For the generator you'll need to check:
+For the generator you'll need to check off:
 
 Scopes:
 
