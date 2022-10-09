@@ -130,3 +130,7 @@ This command lets a user dynamically create a livestream by specifying a stream 
 ### `/streams`
 
 This command lists all created streams and includes the same information as `/create-stream` for each created stream.
+
+## Deploying app
+
+Vercel (https://vercel.com) is probably the simplest way to deploy the app. After adding the required environment variables, connect this Github repo to your Vercel account. On every push to the `main` branch, the application should get automatically deployed.
