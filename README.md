@@ -11,7 +11,7 @@ This is the source code for StreamBot, a Discord bot that (when installed) lets 
 
 ## Setup
 
-### 1. Add applocation domain
+### 1. Add app domain
 
 Add the application's domain to `NEXT_PUBLIC_HOST` as an environment variable. For running locally, `http://localhost:3000` is fine.
 
